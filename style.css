@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%);
+}
+body{
+    text-align: center;
+    font-family: "Kumbh Sans", sans-serif;
+    overflow: hidden;
+}
+h1{
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 18px;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--Dark-cyan);
+    align-items: center;
+    justify-content: center;
+}
+main div.img-top,
+main div.img-bottom{
+    position: absolute;
+    animation: 2s circles forwards;
+    transform: translate(-100px, -100px);
+}
+main div.img-top{
+    top: -600px;
+    left: -500px;
+}
+main div.img-bottom{
+    bottom: -600px;
+    right: -500px;
+}
+@keyframes circles{
+    0%{
+        transform: translate(-100px, -100px);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+main div.card{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+main div.card div.top-part img{
+    border-radius: 10px 10px 0 0;
+}
+main div.card div.middle-part div.profile-card{
+    margin-top: -50px;
+}
+main div.card div.middle-part div.profile-card img{
+    border-radius: 100%;
+    border: 5px solid white;
+    background-color: white;
+}
+main div.card div.middle-part div.nameagecity{
+    margin: 20px;
+}
+main div.card div.middle-part div.nameagecity h1 span.age{
+    color: var(--Dark-grayish-blue);
+    font-style: normal;
+    font-weight: lighter;
+}
+main div.card div.middle-part div.nameagecity p.city{
+    color: var(--Dark-grayish-blue);
+    margin: 10px;
+}
+main div.card div.bottom-part{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    border-top: lightgray 1px solid;
+    padding: 20px;
+}
+main div.card div.bottom-part div.part p.bottom-text{
+    color: var(--Dark-gray);
+    letter-spacing: 1px;
+    margin: 5px;
+}
+footer{
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+}
